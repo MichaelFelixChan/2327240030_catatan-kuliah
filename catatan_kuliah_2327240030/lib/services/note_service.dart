@@ -5,10 +5,9 @@ import 'package:firebase_database/firebase_database.dart';
 class NoteService {
   final DatabaseReference _database = FirebaseDatabase.instance.ref();
 
-  Future<void> addCourse(String name, String lecturer) async {
+  Future<void> addCourse(CourseModel course) async {
     final courseRef = _database.child('courses').push();
-
-    await courseRef.set({'name': name, 'lecturer': lecturer});
+    await courseRef.set(course.toMap());
   }
 
   Future<List<CourseModel>> getCourses() async {
@@ -26,21 +25,9 @@ class NoteService {
     return courses;
   }
 
-  Future<void> addNote({
-    required String courseId,
-    required String courseName,
-    required String title,
-    required String content,
-  }) async {
+  Future<void> addNote(NoteModel note) async {
     final noteRef = _database.child('notes').push();
-
-    await noteRef.set({
-      'courseId': courseId,
-      'courseName': courseName,
-      'title': title,
-      'content': content,
-      'timestamp': DateTime.now().millisecondsSinceEpoch,
-    });
+    await noteRef.set(note.toMap());
   }
 
   Future<List<NoteModel>> getNotes() async {
@@ -58,24 +45,12 @@ class NoteService {
     return notes;
   }
 
-  Future<void> updateNote({
-    required String noteId,
-    required String courseId,
-    required String courseName,
-    required String title,
-    required String content,
-  }) async {
-    await _database.child('notes/$noteId').update({
-      'courseId': courseId,
-      'courseName': courseName,
-      'title': title,
-      'content': content,
-      'timestamp': DateTime.now().millisecondsSinceEpoch,
-    });
+  Future<void> updateNote(NoteModel note) async {
+    await _database.child('notes').child(note.id).update(note.toMap());
   }
 
   Future<void> deleteNote(String noteId) async {
-    await _database.child('notes/$noteId').remove();
+    await _database.child('notes').child(noteId).remove();
   }
 
   List<NoteModel> searchNotes(List<NoteModel> notes, String keyword) {

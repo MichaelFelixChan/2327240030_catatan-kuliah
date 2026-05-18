@@ -4,7 +4,7 @@ class NoteModel {
   final String courseName;
   final String title;
   final String content;
-  final DateTime timestamp;
+  final int timestamp;
 
   NoteModel({
     required this.id,
@@ -21,7 +21,7 @@ class NoteModel {
       'courseName': courseName,
       'title': title,
       'content': content,
-      'timestamp': timestamp.millisecondsSinceEpoch,
+      'timestamp': timestamp,
     };
   }
 
@@ -32,7 +32,7 @@ class NoteModel {
       courseName: map['courseName'] ?? '',
       title: map['title'] ?? '',
       content: map['content'] ?? '',
-      timestamp: DateTime.fromMicrosecondsSinceEpoch(map['timestamp'] ?? 0),
+      timestamp: map['timestamp'] ?? 0,
     );
   }
 }

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "437069537567",
+    "firebase_url": "https://catatan-matkul-2327240030-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "catatan-matkul-2327240030",
+    "storage_bucket": "catatan-matkul-2327240030.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437069537567:android:bb8f23957fc992c9bf502a",
+        "android_client_info": {
+          "package_name": "com.example.catatan_kuliah_2327240030"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYI6P5mcTvsf9nNCf2GKr7Jg69-utCM14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
