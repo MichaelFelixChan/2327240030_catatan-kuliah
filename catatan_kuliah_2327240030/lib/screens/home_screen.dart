@@ -1,6 +1,6 @@
 import 'package:catatan_kuliah_2327240030/models/note_model.dart';
 import 'package:catatan_kuliah_2327240030/screens/add_note_screen.dart';
-import 'package:catatan_kuliah_2327240030/screens/course_screen.dart';
+import 'package:catatan_kuliah_2327240030/screens/add_course_screen.dart';
 import 'package:catatan_kuliah_2327240030/screens/search_screen.dart';
 import 'package:catatan_kuliah_2327240030/services/note_service.dart';
 import 'package:flutter/material.dart';
@@ -59,12 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               leading: const Icon(Icons.subject_rounded),
-              title: const Text('Add Subject'),
+              title: const Text('Add Course'),
               onTap: () async {
                 Navigator.pop(context);
                 await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const CourseScreen()),
+                  MaterialPageRoute(builder: (_) => const AddCourseScreen()),
                 );
                 setState(() {});
               },

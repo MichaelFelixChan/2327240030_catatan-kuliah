@@ -2,14 +2,14 @@ import 'package:catatan_kuliah_2327240030/models/course_model.dart';
 import 'package:catatan_kuliah_2327240030/services/note_service.dart';
 import 'package:flutter/material.dart';
 
-class CourseScreen extends StatefulWidget {
-  const CourseScreen({super.key});
+class AddCourseScreen extends StatefulWidget {
+  const AddCourseScreen({super.key});
 
   @override
-  State<CourseScreen> createState() => _CourseScreenState();
+  State<AddCourseScreen> createState() => _AddCourseScreenState();
 }
 
-class _CourseScreenState extends State<CourseScreen> {
+class _AddCourseScreenState extends State<AddCourseScreen> {
   final NoteService noteService = NoteService();
   final _formKey = GlobalKey<FormState>();
   final courseController = TextEditingController();
