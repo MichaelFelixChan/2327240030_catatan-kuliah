@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         elevation: 4,
-        backgroundColor: const Color(0xFFE57C2),
+        backgroundColor: const Color(0xFF7E57C2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(18),
         ),

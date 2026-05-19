@@ -45,7 +45,7 @@ class _AddCourseScreenState extends State<AddCourseScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         title: const Text(
-          'Kelola Mata Kuliah',
+          'Tambah Mata Kuliah',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
         ),
         iconTheme: const IconThemeData(color: Colors.black),

@@ -1,3 +1,5 @@
+import 'package:firebase_database/firebase_database.dart';
+
 class NoteModel {
   final String id;
   final String courseId;
@@ -21,7 +23,7 @@ class NoteModel {
       'courseName': courseName,
       'title': title,
       'content': content,
-      'timestamp': timestamp,
+      'timestamp': ServerValue.timestamp,
     };
   }
 

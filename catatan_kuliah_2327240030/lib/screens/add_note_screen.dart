@@ -46,7 +46,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
         courseName: selectedCourse.name,
         title: titleController.text.trim(),
         content: contentController.text.trim(),
-        timestamp: DateTime.now().millisecondsSinceEpoch,
+        timestamp: 0,
       );
       await noteService.addNote(note);
       if (mounted) {
